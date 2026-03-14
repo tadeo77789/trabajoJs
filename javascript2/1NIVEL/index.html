@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1NIVEL</title>
+    <script src="js/js.js"></script>
+</head>
+<body>
+
+<h1>Sistema de Cuentas Bancarias</h1>
+
+<h3>Crear cuenta</h3>
+<input type="text" id="cliente" placeholder="Nombre del cliente">
+<input type="number" id="saldoInicial" placeholder="Saldo inicial">
+<button onclick="crearCuenta()">Crear Cuenta</button>
+
+<h3>Operaciones</h3>
+<input type="text" id="clienteOperacion" placeholder="Nombre del cliente">
+<input type="number" id="monto" placeholder="Monto">
+
+<br><br>
+
+<button onclick="depositar()">Depositar</button>
+<button onclick="retirar()">Retirar</button>
+<button onclick="consultarSaldo()">Consultar saldo</button>
+
+<h3>Resultado</h3>
+<p id="resultado"></p>
+
+</body>
+</body>
+</html>
