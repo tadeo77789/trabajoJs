@@ -1,12 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2NIVEL</title>
-    <script src="js/js.js"></script>
+    <title>NIVEL 2</title>
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/js.js" defer></script>
+
 </head>
-<body>
-    
+
+<body class="d-flex justify-content-center align-items-center vh-100 fondo">
+
+<div class="container">
+
+    <!-- Botón casa -->
+    <a href="/" class="btn btn-light position-absolute top-0 start-0 m-4 shadow">
+        <i class="bi bi-house-fill"></i>
+    </a>
+
+    <div class="row justify-content-center g-4 align-items-stretch">
+
+        <!-- CARD REGISTRAR PRODUCTO -->
+        <div class="col-md-4">
+
+            <div class="card text-white bg-dark p-3 shadow h-100">
+
+                <div class="card-body text-center">
+
+                    <h4 class="mb-4">
+                        Registrar producto
+                    </h4>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        class="form-control mb-3"
+                        placeholder="Nombre del producto"
+                    >
+
+                    <input
+                        type="number"
+                        id="precio"
+                        class="form-control mb-3"
+                        placeholder="Precio"
+                    >
+
+                    <input
+                        type="number"
+                        id="cantidad"
+                        class="form-control mb-3"
+                        placeholder="Cantidad"
+                    >
+
+                    <button
+                        onclick="registrarProducto()"
+                        class="btn btn-success w-100"
+                    >
+                        Registrar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CARD CONSULTAR -->
+        <div class="col-md-4">
+
+            <div class="card text-white bg-dark p-3 shadow h-100">
+
+                <div class="card-body text-center">
+
+                    <h4 class="mb-4">
+                        Consultar producto
+                    </h4>
+
+                    <input
+                        type="text"
+                        id="buscar"
+                        class="form-control mb-3"
+                        placeholder="Nombre del producto"
+                    >
+
+                    <div class="d-grid gap-2">
+
+                        <button
+                            onclick="consultarProducto()"
+                            class="btn btn-primary"
+                        >
+                            Consultar
+                        </button>
+
+                        <button
+                            onclick="valorInventario()"
+                            class="btn btn-warning"
+                        >
+                            Valor total inventario
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CARD RESULTADO -->
+        <div class="col-md-4">
+
+            <div class="card text-white bg-dark p-3 shadow h-100">
+
+                <div class="card-body text-center">
+
+                    <h4 class="mb-3">
+                        Resultado
+                    </h4>
+
+                    <p id="resultado" class="fs-5">
+                        Información del inventario
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
 </body>
+
 </html>

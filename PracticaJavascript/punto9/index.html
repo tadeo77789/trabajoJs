@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9NIVEL</title>
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/js.js" defer></script>
+
+</head>
+
+<body class="d-flex justify-content-center align-items-center vh-100">
+
+    <div class="container">
+
+        <!-- Botón casa -->
+        <a href="/" class="btn btn-light position-absolute top-0 start-0 m-4 shadow">
+            <i class="bi bi-house-fill"></i>
+        </a>
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-4">
+
+                <div class="card text-white bg-dark p-4 shadow text-center">
+
+                    <h4 class="mb-4">
+                        Temporizador
+                    </h4>
+
+                    <!-- CONTADOR -->
+                    <h1 id="contador" class="display-3 mb-4">
+                        0
+                    </h1>
+
+                    <!-- BOTONES -->
+                    <div class="d-grid gap-2">
+
+                        <button
+                            onclick="iniciar()"
+                            class="btn btn-success"
+                        >
+                            <i class="bi bi-play-fill"></i> Iniciar
+                        </button>
+
+                        <button
+                            onclick="detener()"
+                            class="btn btn-warning"
+                        >
+                            <i class="bi bi-pause-fill"></i> Detener
+                        </button>
+
+                        <button
+                            onclick="reiniciar()"
+                            class="btn btn-danger"
+                        >
+                            <i class="bi bi-arrow-counterclockwise"></i> Reiniciar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

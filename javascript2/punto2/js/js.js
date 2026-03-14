@@ -1,7 +1,57 @@
-/*Problema 2: Inventario de una tienda
-Una tienda de tecnología necesita un sistema para administrar los productos que tiene en su
-inventario.
-Cada producto tiene información como su nombre, precio y la cantidad disponible en el almacén. El
-sistema debe permitir registrar nuevos productos, consultar la información de cada uno y calcular el
-valor total del inventario según la cantidad disponible.
-La tienda quiere usar este sistema para tener un mejor control de los productos que vende.*/
+let inventario = [];
+
+function registrarProducto(){
+
+    let nombre = document.getElementById("nombre").value;
+    let precio = parseFloat(document.getElementById("precio").value);
+    let cantidad = parseInt(document.getElementById("cantidad").value);
+
+    let producto = {
+        nombre: nombre,
+        precio: precio,
+        cantidad: cantidad
+    };
+
+    inventario.push(producto);
+
+    document.getElementById("resultado").textContent =
+    "Producto registrado correctamente";
+
+}
+
+function consultarProducto(){
+
+    let buscar = document.getElementById("buscar").value;
+
+    let producto = inventario.find(p => p.nombre === buscar);
+
+    if(producto){
+
+        document.getElementById("resultado").textContent =
+        "Producto: " + producto.nombre +
+        " | Precio: $" + producto.precio +
+        " | Cantidad: " + producto.cantidad;
+
+    }else{
+
+        document.getElementById("resultado").textContent =
+        "Producto no encontrado";
+
+    }
+
+}
+
+function valorInventario(){
+
+    let total = 0;
+
+    inventario.forEach(p => {
+
+        total += p.precio * p.cantidad;
+
+    });
+
+    document.getElementById("resultado").textContent =
+    "Valor total del inventario: $" + total;
+
+}

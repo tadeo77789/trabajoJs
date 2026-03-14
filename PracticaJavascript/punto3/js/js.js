@@ -1,9 +1,11 @@
-function rojo() {
-    document.body.style.backgroundColor = "red";
+function rojo(){
+    document.body.style.background = "red";
 }
-function verde() {
-    document.body.style.backgroundColor = "green";
+
+function verde(){
+    document.body.style.background = "green";
 }
-function amarillo() {
-    document.body.style.backgroundColor = "yellow";
+
+function amarillo(){
+    document.body.style.background = "yellow";
 }

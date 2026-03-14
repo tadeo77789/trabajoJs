@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3NIVEL</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <script src="js/js.js"></script>
 </head>
-<body>
-    <div><button onclick="rojo()">Rojo</button></div>
-    <div><button onclick="verde()">Verde</button></div>
-    <div><button onclick="amarillo()">Amarillo</button></div>
+
+<body class="d-flex justify-content-center align-items-center vh-100">
+            <a href="/" class="btn btn-light position-absolute top-0 start-0 m-4 shadow">
+        <i class="bi bi-house-fill"></i>
+            </a>
+    <div class="card p-4 shadow text-center text-white bg-dark mb-3" style="width: 22rem;">
+
+        <h4 class="mb-4">Seleccionar color</h4>
+
+        <div class="form-check form-switch text-start">
+            <input class="form-check-input" type="radio" name="color" id="rojo" onchange="rojo()">
+            <label class="form-check-label" for="rojo">Rojo</label>
+        </div>
+
+        <div class="form-check form-switch text-start">
+            <input class="form-check-input" type="radio" name="color" id="verde" onchange="verde()">
+            <label class="form-check-label" for="verde">Verde</label>
+        </div>
+
+        <div class="form-check form-switch text-start">
+            <input class="form-check-input" type="radio" name="color" id="amarillo" onchange="amarillo()">
+            <label class="form-check-label" for="amarillo">Amarillo</label>
+        </div>
+
+    </div>
+
 </body>
+
 </html>
+
